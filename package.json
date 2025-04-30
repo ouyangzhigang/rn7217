@@ -8,6 +8,8 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
+    "prettier": "prettier --write .",
+    "build": "yarn build:ios && yarn build:android",
     "build:ios": "react-native bundle --platform ios --dev false --entry-file index.js --bundle-output dist/ios.jsbundle --assets-dest dist/ios",
     "build:android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output dist/android.jsbundle --assets-dest dist/android"
   },

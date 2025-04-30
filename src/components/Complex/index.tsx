@@ -1,10 +1,12 @@
 import React from 'react';
 import {FlatList} from 'react-native';
-import ListItem from '@/components/ListItem/index';
 
-const ComplexList = ({data}: any) => {
-  const renderItem = ({item}: any) => <ListItem item={item} />;
+interface ComplexListProps {
+  data: any[];
+  renderItem: ({item}: {item: any}) => JSX.Element;
+}
 
+const ComplexList = ({data, renderItem}: ComplexListProps) => {
   return (
     <FlatList
       data={data}

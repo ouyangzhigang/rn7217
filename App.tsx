@@ -11,8 +11,10 @@ import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
 // import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import Header from '@/components/Header';
 // import Home from '@/views/home';
-import List from '@/views/list';
+// import List from '@/views/list';
+import GoodsPage from '@/views/goods';
 
 // const Stack = createNativeStackNavigator();
 
@@ -29,6 +31,7 @@ function App(): JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
+      <Header title={'分期商城'} />
       {/* <NavigationContainer>
         <Stack.Navigator initialRouteName="Home">
           <Stack.Screen
@@ -43,7 +46,8 @@ function App(): JSX.Element {
           />
         </Stack.Navigator>
       </NavigationContainer> */}
-      <List />
+      {/* <List /> */}
+      <GoodsPage />
     </SafeAreaView>
   );
 }
